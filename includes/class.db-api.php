@@ -324,8 +324,9 @@ class DB_API {
 	 * @return string the column name
 	 */
 	function get_first_column( $table, $db = null ) {
-
-		return reset( $this->get_columns( $table, $db ) );
+		
+		$response = $this->get_columns( $table, $db );
+		return reset( $response );
 
 	}
 
